@@ -35,4 +35,9 @@ class PagesController extends AppController
     {
 
     }
+    
+    public function index2()
+    {
+        $this->viewBuilder()->setLayout('adminlte');
+    }
 }

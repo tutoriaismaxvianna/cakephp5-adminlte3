@@ -29,7 +29,7 @@
     <div class="wrapper">
 
         <?= $this->element('adminlte/preloader'); ?>
-        <?= $this->element('adminlte/navbar'); ?>
+        <?= $this->element('adminlte/navbar-dark'); ?>
         <?= $this->element('adminlte/sidebar'); ?>
 
         <?= $this->Flash->render() ?>

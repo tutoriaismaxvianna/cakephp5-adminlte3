@@ -31,6 +31,12 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->viewBuilder()->setLayout("adminlte");
+    }
+
     public function home()
     {
 
@@ -38,6 +44,6 @@ class PagesController extends AppController
     
     public function index2()
     {
-        $this->viewBuilder()->setLayout('adminlte');
+        // $this->viewBuilder()->setLayout('adminlte');
     }
 }

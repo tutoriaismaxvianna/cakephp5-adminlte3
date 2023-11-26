@@ -6,6 +6,7 @@
 /tmp/*
 /vendor/*
 /webroot/adminlte
+/webroot/img/adminlte
 
 # OS generated files #
 ######################

@@ -1,55 +1,95 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- * @var \App\View\AppView $this
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake']) ?>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Font Awesome -->
+    <!-- Tempusdominus Bootstrap 4 -->
+    <!-- iCheck -->
+    <!-- JQVMap -->
+    <!-- Theme style -->
+    <!-- overlayScrollbars -->
+    <!-- Daterange picker -->
+    <!-- summernote -->
+    <?= $this->Html->css([
+        '/adminlte/plugins/fontawesome-free/css/all.min',
+        '/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min',
+        '/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min',
+        '/adminlte/plugins/jqvmap/jqvmap.min',
+        '/adminlte/dist/css/adminlte.min',
+        '/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min',
+        '/adminlte/plugins/daterangepicker/daterangepicker',
+        '/adminlte/plugins/summernote/summernote-bs4.min',
+    ]) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
 </head>
-<body>
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-        <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/5/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
-        </div>
-    </nav>
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
-    </main>
-    <footer>
-    </footer>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <!-- jQuery UI 1.11.4 -->
+    <?= $this->Html->script([
+        '/adminlte/plugins/jquery/jquery.min',
+        '/adminlte/plugins/jquery-ui/jquery-ui.min',
+    ]) ?>
+
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+
+    <!-- Bootstrap 4 -->
+    <!-- ChartJS -->
+    <!-- Sparkline -->
+    <!-- JQVMap -->
+    <!-- jQuery Knob Chart -->
+    <!-- daterangepicker -->
+    <!-- Tempusdominus Bootstrap 4 -->
+    <!-- Summernote -->
+    <!-- overlayScrollbars -->
+    <!-- AdminLTE App -->
+    <!-- AdminLTE for demo purposes -->
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+    <?= $this->Html->script([
+        '/adminlte/plugins/bootstrap/js/bootstrap.bundle.min',
+        '/adminlte/plugins/chart.js/Chart.min',
+        '/adminlte/plugins/sparklines/sparkline',
+        '/adminlte/plugins/jqvmap/jquery.vmap.min',
+        '/adminlte/plugins/jqvmap/maps/jquery.vmap.usa',
+        '/adminlte/plugins/jquery-knob/jquery.knob.min',
+        '/adminlte/plugins/moment/moment.min',
+        '/adminlte/plugins/daterangepicker/daterangepicker',
+        '/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min',
+        '/adminlte/plugins/summernote/summernote-bs4.min',
+        '/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min',
+        '/adminlte/dist/js/adminlte',
+        '/adminlte/dist/js/demo',
+        '/adminlte/dist/js/pages/dashboard',
+    ]) ?>
+
+    <?= $this->fetch('script') ?>
+
 </body>
+
 </html>

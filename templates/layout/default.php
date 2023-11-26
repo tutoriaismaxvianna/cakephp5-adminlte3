@@ -40,8 +40,15 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
+        <?= $this->element('adminlte/preloader'); ?>
+        <?= $this->element('adminlte/navbar'); ?>
+        <?= $this->element('adminlte/sidebar'); ?>
+
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
+
+        <?= $this->element('adminlte/footer'); ?>
+        <?= $this->element('adminlte/control-sidebar'); ?>
 
     </div>
     <!-- ./wrapper -->
